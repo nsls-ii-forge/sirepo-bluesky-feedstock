@@ -1,0 +1,47 @@
+{% set name = "sirepo-bluesky" %}
+{% set version = "0.0.2" %}
+{% set sha256 = "05e520d72cc100dd9bc28c6742c45fec4856763595acdd91c738ad71580abd21" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - bluesky
+    - databroker
+    - ipython
+    - matplotlib
+    - numconv
+    - numpy
+    - ophyd
+    - pymongo
+    - pyqt5 >=5.9
+    - python
+    - requests
+    - srwpy
+    - unyt
+
+test:
+  imports:
+    - sirepo_bluesky
+
+about:
+  home: https://github.com/NSLS-II/sirepo-bluesky
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Sirepo-Bluesky interface
