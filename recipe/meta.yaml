@@ -29,7 +29,7 @@ requirements:
     - numpy
     - ophyd
     - pymongo
-    - pyqt5 >=5.9
+    - pyqt >=5.9
     - python
     - requests
     - srwpy
