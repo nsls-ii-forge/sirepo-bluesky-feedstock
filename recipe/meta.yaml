@@ -1,6 +1,6 @@
 {% set name = "sirepo-bluesky" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "768bbad78917f0036570afce80d8249bc5ccf54f0da71654f703fbcac93de115" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "40520967c8c4edb09f8fa48cead855d0d453460b8ffb5824f15760d2a831eca6" %}
 
 package:
   name: {{ name|lower }}
